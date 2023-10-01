@@ -109,6 +109,7 @@ function addingNewBook(tittle, author, cover, pages, read){
         const removeButton= document.createElement('button');
         removeButton.onclick = function () {
             removeBook(cardDiv.id);
+            actualizadorDeLibros();
           };
         removeButton.classList.add("removeBook");
         removeButton.textContent = "Remove";
@@ -134,6 +135,7 @@ function addingNewBook(tittle, author, cover, pages, read){
 
     function removeBook(x){
         const bookToDelete= document.getElementById(x);
+        delete theLibrary[x];
         console.log(bookToDelete)
         bookToDelete.remove();
 
