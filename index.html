@@ -13,33 +13,35 @@
         </div>
         <div class="bodyCenter">
             <div class="mainContent">
-                <div class="card">
-                    <h3 class="bookTittle">The Hobbit</h3>
-                    <h4 class="by">J.R.R Tolkien</h4>
-                    <h4 class="pages">295 pages</h4>
-                    <div class="buttonToggle">
-                        <label class="switch">
-                            <input type="checkbox">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-                </div>
+                
                 
             </div> 
             <div class="addBook">
                 <h3 id="info">Information</h3>
                 <hr>
-                <h4>Books:</h4>
+                <h4 id="bookCounter">Books:</h4>
                 <hr>
-                <h4>Completed books: </h4>
-
+                <h4 id="completedBookCounter">Completed books: </h4>
+                <hr>
+                <button class="addButton" id="addButton">Add</button>
             </div>
-        
+            
         </div>
-
+<div class="overlay" id="overlay"></div>
          <!--                FOOTER                       -->
     <footer class="footer"><h5>Copyright © PablinhooCl Inc.</h5></footer>
     </div>
+        <!--                   FORM INPUT BOOK -->
+        <div class="bookInputer" id="bookInputer">
+            <form class="formInputer" id="newBook">
+                <input type="text" id="tittle" placeholder="Tittle" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="url" id="cover" placeholder="Cover" > 
+                <input type="number" id="pages" placeholder="N of pages" required>
+                <div class="readChecbox"><label for="read">Readed</label><input type="checkbox" name="read" id="read" value=""></div>
+                <button class="formSubmit" type="submit">Add book</button>
+            </form>
+        </div>
 </body>
 <script src="script.js"></script>
 <link rel="stylesheet" href="style.css">
