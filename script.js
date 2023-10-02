@@ -135,9 +135,10 @@ function addingNewBook(tittle, author, cover, pages, read){
 
     function removeBook(x){
         const bookToDelete= document.getElementById(x);
-        delete theLibrary[x];
+        theLibrary.splice(x, 1);
         console.log(bookToDelete)
         bookToDelete.remove();
+        theLibrary.length - 1;
 
     }
 
